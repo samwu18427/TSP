@@ -1,5 +1,3 @@
-package tsp;
-
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
@@ -133,7 +131,7 @@ public class SA_TSP {
         drawPath(bestSol);
     }
 
-    public static void main(String args[]) throws IOException {
+    public static void main(String[] args) throws IOException {
         SA_TSP similarAnnealingALgo = new SA_TSP();
         similarAnnealingALgo.run();
     }
