@@ -82,7 +82,7 @@ public class AC_TSP {
     }                           //最佳選擇
 
 
-    void localupdate(int[] path) {
+    void localUpdate(int[] path) {
         for (int index = 0; index < totalCity; index++) {
             if (index != totalCity - 1)
                 messTable[path[index] - 1][path[index + 1] - 1] += Q / calDistance(path);
@@ -98,7 +98,7 @@ public class AC_TSP {
 
     void drawPath(int[] path) {
         Frame demo = new Frame("Path demo");
-        demo.add(new drawTspPath(cityList, path));
+        demo.add(new DrawTspPath(cityList, path));
         demo.setSize(650, 650);
         demo.setLocation(100, 100);
         demo.setVisible(true);
@@ -143,7 +143,7 @@ public class AC_TSP {
                         antColony[antId][pathLength] = BestSelection(antId, pathLength - 1);
 
             for (int antId = 0; antId < ANT_NUM; antId++) {
-                localupdate(antColony[antId]);                                                    //更新路徑訊息素
+                localUpdate(antColony[antId]);                                                    //更新路徑訊息素
                 double pathDistance = calDistance(antColony[antId]);
                 if (pathDistance < bestSolDistance) {                                            //檢查最佳路徑
                     bestSol = antColony[antId];

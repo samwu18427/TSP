@@ -6,7 +6,7 @@ import java.util.*;
 import java.util.List;
 
 public class TS_TSP {
-    String FILE_PATH ="Dataset/eil51";
+    String FILE_PATH = "Dataset/eil51";
     int totalCity;                                                                              //city數量
     int MAX_GENERATION = 100000;                                                                    //新解產生迭代上限
     int neighborRange = 100;                                                                        //相鄰解範圍
@@ -86,7 +86,7 @@ public class TS_TSP {
 
     void drawPath(int[] path) {
         Frame demo = new Frame("Path demo");
-        demo.add(new drawTspPath(cityList, path));
+        demo.add(new DrawTspPath(cityList, path));
         demo.setSize(650, 650);
         demo.setLocation(100, 100);
         demo.setVisible(true);

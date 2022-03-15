@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.*;
 
 public class SA_TSP {
-    String FILE_PATH ="Dataset/eil51";
+    String FILE_PATH = "Dataset/eil51";
     static double TEMPERATURE = 10000;                                                                     //初始溫度
     static double SUCCESS_RATE = 0.998;                                                                         //若接受更新最優解則較快的降溫係數
     static double FAILURE_RATE = 0.999;                                                                         //若未接受更新最優解則使用較慢的降溫係數
@@ -81,7 +81,7 @@ public class SA_TSP {
 
     void drawPath(int[] path) {
         Frame demo = new Frame("Path demo");
-        demo.add(new drawTspPath(cityList, path));
+        demo.add(new DrawTspPath(cityList, path));
         demo.setSize(650, 650);
         demo.setLocation(100, 100);
         demo.setVisible(true);

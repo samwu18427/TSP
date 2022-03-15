@@ -1,13 +1,13 @@
 import java.awt.*;
 import java.util.ArrayList;
 
-public class drawTspPath extends Canvas {
+public class DrawTspPath extends Canvas {
     ArrayList<CityNode> cityList;
     int[] path;
     int[] x;
     int[] y;
 
-    public drawTspPath(ArrayList<CityNode> cityList, int[] path) {
+    public DrawTspPath(ArrayList<CityNode> cityList, int[] path) {
         this.cityList = cityList;
         this.path = path;
         x = new int[cityList.size()];

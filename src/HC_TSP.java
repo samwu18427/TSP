@@ -6,7 +6,7 @@ import java.util.*;
 import java.util.List;
 
 public class HC_TSP {
-    String FilePath="Dataset/eil51";
+    String FilePath = "Dataset/eil51";
     ArrayList<CityNode> cityList;                                //city資料集
     int totalCity;                                              //city數量
 
@@ -84,7 +84,7 @@ public class HC_TSP {
 
     void drawPath(int[] path) {
         Frame demo = new Frame("Path demo");
-        demo.add(new drawTspPath(cityList, path));
+        demo.add(new DrawTspPath(cityList, path));
         demo.setSize(650, 650);
         demo.setLocation(100, 100);
         demo.setVisible(true);

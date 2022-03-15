@@ -184,7 +184,7 @@ public class GA_TSP {
 
     void drawPath(int[] path) {
         Frame demo = new Frame("Path demo");
-        demo.add(new drawTspPath(cityList, path));
+        demo.add(new DrawTspPath(cityList, path));
         demo.setSize(650, 650);
         demo.setLocation(100, 100);
         demo.setVisible(true);
